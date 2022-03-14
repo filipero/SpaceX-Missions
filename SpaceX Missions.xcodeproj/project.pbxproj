@@ -9,13 +9,26 @@
 /* Begin PBXBuildFile section */
 		A107B83727DA70F2001E4AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B83627DA70F2001E4AF0 /* AppDelegate.swift */; };
 		A107B83927DA70F2001E4AF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B83827DA70F2001E4AF0 /* SceneDelegate.swift */; };
-		A107B83B27DA70F2001E4AF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B83A27DA70F2001E4AF0 /* ViewController.swift */; };
-		A107B83E27DA70F2001E4AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A107B83C27DA70F2001E4AF0 /* Main.storyboard */; };
 		A107B84027DA70F5001E4AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A107B83F27DA70F5001E4AF0 /* Assets.xcassets */; };
 		A107B84327DA70F5001E4AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A107B84127DA70F5001E4AF0 /* LaunchScreen.storyboard */; };
 		A107B84E27DA70F5001E4AF0 /* SpaceX_MissionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B84D27DA70F5001E4AF0 /* SpaceX_MissionsTests.swift */; };
 		A107B85827DA70F5001E4AF0 /* SpaceX_MissionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B85727DA70F5001E4AF0 /* SpaceX_MissionsUITests.swift */; };
 		A107B85A27DA70F5001E4AF0 /* SpaceX_MissionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B85927DA70F5001E4AF0 /* SpaceX_MissionsUITestsLaunchTests.swift */; };
+		A107B86727DA71E1001E4AF0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B86627DA71E1001E4AF0 /* Coordinator.swift */; };
+		A107B86927DA728A001E4AF0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B86827DA728A001E4AF0 /* AppCoordinator.swift */; };
+		A107B86D27DA73B8001E4AF0 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B86C27DA73B8001E4AF0 /* HomeCoordinator.swift */; };
+		A107B86F27DA73C2001E4AF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B86E27DA73C2001E4AF0 /* HomeViewController.swift */; };
+		A107B87127DA73D0001E4AF0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B87027DA73D0001E4AF0 /* HomeView.swift */; };
+		A107B87327DA73D9001E4AF0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B87227DA73D9001E4AF0 /* HomeViewModel.swift */; };
+		A107B87527DA7477001E4AF0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A107B87427DA7477001E4AF0 /* BaseView.swift */; };
+		A185DFDC27DE83FD0074BF76 /* MissionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFDB27DE83FD0074BF76 /* MissionCellView.swift */; };
+		A185DFDE27DE84050074BF76 /* MissionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFDD27DE84050074BF76 /* MissionCellViewModel.swift */; };
+		A185DFE027DE84E20074BF76 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFDF27DE84E20074BF76 /* TableViewDataSource.swift */; };
+		A185DFE227DE89F70074BF76 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFE127DE89F70074BF76 /* UIImageView+Extensions.swift */; };
+		A185DFE727DE8E7A0074BF76 /* AllMissionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFE627DE8E7A0074BF76 /* AllMissionsRequest.swift */; };
+		A185DFEA27DE8E9E0074BF76 /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = A185DFE927DE8E9E0074BF76 /* NetworkManager */; };
+		A185DFEC27DE901B0074BF76 /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFEB27DE901B0074BF76 /* HomeWorker.swift */; };
+		A185DFEE27DE91E10074BF76 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A185DFED27DE91E10074BF76 /* Launch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +52,6 @@
 		A107B83327DA70F2001E4AF0 /* SpaceX Missions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpaceX Missions.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A107B83627DA70F2001E4AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A107B83827DA70F2001E4AF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A107B83A27DA70F2001E4AF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A107B83D27DA70F2001E4AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A107B83F27DA70F5001E4AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A107B84227DA70F5001E4AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A107B84427DA70F5001E4AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +60,21 @@
 		A107B85327DA70F5001E4AF0 /* SpaceX MissionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpaceX MissionsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A107B85727DA70F5001E4AF0 /* SpaceX_MissionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_MissionsUITests.swift; sourceTree = "<group>"; };
 		A107B85927DA70F5001E4AF0 /* SpaceX_MissionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceX_MissionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A107B86627DA71E1001E4AF0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A107B86827DA728A001E4AF0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A107B86C27DA73B8001E4AF0 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A107B86E27DA73C2001E4AF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A107B87027DA73D0001E4AF0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A107B87227DA73D9001E4AF0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A107B87427DA7477001E4AF0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A107B87627DA76F9001E4AF0 /* NetworkManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NetworkManager; path = ../../NetworkManager; sourceTree = "<group>"; };
+		A185DFDB27DE83FD0074BF76 /* MissionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCellView.swift; sourceTree = "<group>"; };
+		A185DFDD27DE84050074BF76 /* MissionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCellViewModel.swift; sourceTree = "<group>"; };
+		A185DFDF27DE84E20074BF76 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		A185DFE127DE89F70074BF76 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		A185DFE627DE8E7A0074BF76 /* AllMissionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMissionsRequest.swift; sourceTree = "<group>"; };
+		A185DFEB27DE901B0074BF76 /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		A185DFED27DE91E10074BF76 /* Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A185DFEA27DE8E9E0074BF76 /* NetworkManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,7 @@
 				A107B84C27DA70F5001E4AF0 /* SpaceX MissionsTests */,
 				A107B85627DA70F5001E4AF0 /* SpaceX MissionsUITests */,
 				A107B83427DA70F2001E4AF0 /* Products */,
+				A185DFE827DE8E9E0074BF76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +127,17 @@
 		A107B83527DA70F2001E4AF0 /* SpaceX Missions */ = {
 			isa = PBXGroup;
 			children = (
+				A107B87627DA76F9001E4AF0 /* NetworkManager */,
+				A107B86A27DA734B001E4AF0 /* Scenes */,
 				A107B83627DA70F2001E4AF0 /* AppDelegate.swift */,
 				A107B83827DA70F2001E4AF0 /* SceneDelegate.swift */,
-				A107B83A27DA70F2001E4AF0 /* ViewController.swift */,
-				A107B83C27DA70F2001E4AF0 /* Main.storyboard */,
 				A107B83F27DA70F5001E4AF0 /* Assets.xcassets */,
 				A107B84127DA70F5001E4AF0 /* LaunchScreen.storyboard */,
 				A107B84427DA70F5001E4AF0 /* Info.plist */,
+				A107B86627DA71E1001E4AF0 /* Coordinator.swift */,
+				A107B86827DA728A001E4AF0 /* AppCoordinator.swift */,
+				A107B87427DA7477001E4AF0 /* BaseView.swift */,
+				A185DFE127DE89F70074BF76 /* UIImageView+Extensions.swift */,
 			);
 			path = "SpaceX Missions";
 			sourceTree = "<group>";
@@ -127,6 +159,54 @@
 			path = "SpaceX MissionsUITests";
 			sourceTree = "<group>";
 		};
+		A107B86A27DA734B001E4AF0 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A107B86B27DA7360001E4AF0 /* Home */,
+				A185DFDF27DE84E20074BF76 /* TableViewDataSource.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A107B86B27DA7360001E4AF0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A185DFE527DE8E6D0074BF76 /* Requests */,
+				A185DFDA27DE83EF0074BF76 /* MissionsCell */,
+				A107B86C27DA73B8001E4AF0 /* HomeCoordinator.swift */,
+				A107B86E27DA73C2001E4AF0 /* HomeViewController.swift */,
+				A107B87027DA73D0001E4AF0 /* HomeView.swift */,
+				A107B87227DA73D9001E4AF0 /* HomeViewModel.swift */,
+				A185DFEB27DE901B0074BF76 /* HomeWorker.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A185DFDA27DE83EF0074BF76 /* MissionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				A185DFDB27DE83FD0074BF76 /* MissionCellView.swift */,
+				A185DFDD27DE84050074BF76 /* MissionCellViewModel.swift */,
+			);
+			path = MissionsCell;
+			sourceTree = "<group>";
+		};
+		A185DFE527DE8E6D0074BF76 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A185DFE627DE8E7A0074BF76 /* AllMissionsRequest.swift */,
+				A185DFED27DE91E10074BF76 /* Launch.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		A185DFE827DE8E9E0074BF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +223,9 @@
 			dependencies = (
 			);
 			name = "SpaceX Missions";
+			packageProductDependencies = (
+				A185DFE927DE8E9E0074BF76 /* NetworkManager */,
+			);
 			productName = "SpaceX Missions";
 			productReference = A107B83327DA70F2001E4AF0 /* SpaceX Missions.app */;
 			productType = "com.apple.product-type.application";
@@ -233,7 +316,6 @@
 			files = (
 				A107B84327DA70F5001E4AF0 /* LaunchScreen.storyboard in Resources */,
 				A107B84027DA70F5001E4AF0 /* Assets.xcassets in Resources */,
-				A107B83E27DA70F2001E4AF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +340,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A107B83B27DA70F2001E4AF0 /* ViewController.swift in Sources */,
+				A185DFE227DE89F70074BF76 /* UIImageView+Extensions.swift in Sources */,
+				A107B86727DA71E1001E4AF0 /* Coordinator.swift in Sources */,
+				A185DFEE27DE91E10074BF76 /* Launch.swift in Sources */,
+				A185DFE727DE8E7A0074BF76 /* AllMissionsRequest.swift in Sources */,
+				A107B87327DA73D9001E4AF0 /* HomeViewModel.swift in Sources */,
+				A185DFDE27DE84050074BF76 /* MissionCellViewModel.swift in Sources */,
+				A107B86927DA728A001E4AF0 /* AppCoordinator.swift in Sources */,
 				A107B83727DA70F2001E4AF0 /* AppDelegate.swift in Sources */,
 				A107B83927DA70F2001E4AF0 /* SceneDelegate.swift in Sources */,
+				A185DFE027DE84E20074BF76 /* TableViewDataSource.swift in Sources */,
+				A107B87127DA73D0001E4AF0 /* HomeView.swift in Sources */,
+				A107B87527DA7477001E4AF0 /* BaseView.swift in Sources */,
+				A185DFDC27DE83FD0074BF76 /* MissionCellView.swift in Sources */,
+				A107B86F27DA73C2001E4AF0 /* HomeViewController.swift in Sources */,
+				A185DFEC27DE901B0074BF76 /* HomeWorker.swift in Sources */,
+				A107B86D27DA73B8001E4AF0 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +392,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A107B83C27DA70F2001E4AF0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A107B83D27DA70F2001E4AF0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A107B84127DA70F5001E4AF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,7 +529,6 @@
 				INFOPLIST_FILE = "SpaceX Missions/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -470,7 +556,6 @@
 				INFOPLIST_FILE = "SpaceX Missions/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -602,6 +687,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A185DFE927DE8E9E0074BF76 /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A107B82B27DA70F2001E4AF0 /* Project object */;
 }
