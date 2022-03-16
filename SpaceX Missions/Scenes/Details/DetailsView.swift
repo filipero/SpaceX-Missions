@@ -10,10 +10,12 @@ import UIKit
 final class DetailsView: BaseView {
     let nameLabel: UILabel = {
         let view = UILabel()
+        view.font = .systemFont(ofSize: 24, weight: .bold)
         return view
     }()
     let detailsLabel: UILabel = {
         let view = UILabel()
+        view.numberOfLines = 0
         return view
     }()
     let dateLabel: UILabel = {
@@ -22,8 +24,9 @@ final class DetailsView: BaseView {
     }()
     private lazy var mainStackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [nameLabel,
-                                                  detailsLabel,
-                                                  dateLabel])
+                                                  dateLabel,
+                                                  detailsLabel, UIView()])
+        view.axis = .vertical
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

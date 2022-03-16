@@ -36,6 +36,8 @@ final class DetailsViewController: UIViewController {
     }
     
     private func setupBinds() {
-    
+        baseView.nameLabel.text = viewModel.name
+        baseView.detailsLabel.text = viewModel.details
+        baseView.dateLabel.text = viewModel.date.fromISO8601
     }
 }

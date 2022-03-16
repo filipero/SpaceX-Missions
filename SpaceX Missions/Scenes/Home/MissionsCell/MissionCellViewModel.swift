@@ -12,13 +12,8 @@ struct MissionCellViewModel {
     let mission: Launch
     func configure(cell: MissionCellView) {
         cell.profileImageView.image = nil
-
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd/MM/yyyy"
         
-        let formatter = ISO8601DateFormatter()
-        let date = formatter.date(from: mission.dateLocal ?? "")
-        cell.dateOfLaunchLabel.text = dateFormatterPrint.string(from: date ?? .now)
+        cell.dateOfLaunchLabel.text = mission.dateLocal?.fromISO8601
         cell.nameLabel.text = mission.name
         cell.profileImageView.downloaded(from: mission.links?.patch?.large ?? "")
     }
