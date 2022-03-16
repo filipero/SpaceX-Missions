@@ -19,7 +19,6 @@ final class HomeCoordinator: NSObject, Coordinator {
     }
     
     // MARK: - Functions
-    
     func start() {
         let homeViewModel = HomeViewModel(navigationDelegate: self)
         let homeViewController = HomeViewController(viewModel: homeViewModel)
@@ -28,7 +27,13 @@ final class HomeCoordinator: NSObject, Coordinator {
 }
 
 extension HomeCoordinator: HomeNavigationDelegate {
-    
+    func goToDetailsScreen(launch: Launch) {
+        let detailsCoordinator: DetailsCoordinator = DetailsCoordinator(launch: launch,
+                                                                        presenter: presenter,
+                                                                        navigationDelegate: self)
+        addChildCoordinator(detailsCoordinator)
+        detailsCoordinator.start()
+    }
 }
 
 extension HomeCoordinator: CoordinatorDelegate {

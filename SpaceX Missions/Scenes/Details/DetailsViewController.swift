@@ -36,6 +36,6 @@ final class DetailsViewController: UIViewController {
     }
     
     private func setupBinds() {
-        
+    
     }
 }

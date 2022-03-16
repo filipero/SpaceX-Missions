@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeNavigationDelegate: AnyObject {
-    
+    func goToDetailsScreen(launch: Launch)
 }
 
 protocol HomeViewModelProtocol: AnyObject {
@@ -17,6 +17,7 @@ protocol HomeViewModelProtocol: AnyObject {
     var missionDataSource: TableViewDataSource<MissionCellViewModel> { get }
     
     func requestMissions()
+    func goToDetailsScreen(launch: Launch)
 }
 
 protocol DataSourceDelegate: AnyObject {
@@ -31,7 +32,7 @@ class HomeViewModel {
     var missionDataSource: TableViewDataSource<MissionCellViewModel> = .make(for: [])
     
     init(service: HomeWorkerProtocol = HomeWorker(),
-         navigationDelegate: HomeNavigationDelegate? = nil) {
+         navigationDelegate: HomeNavigationDelegate?) {
         self.service = service
         self.navigationDelegate = navigationDelegate
     }
@@ -49,6 +50,10 @@ extension HomeViewModel: HomeViewModelProtocol {
             self.missionDataSource = .make(for: missionModels)
             self.dataSourceDelegate?.updateTableView()
         }
+    }
+    
+    func goToDetailsScreen(launch: Launch) {
+        navigationDelegate?.goToDetailsScreen(launch: launch)
     }
 }
 

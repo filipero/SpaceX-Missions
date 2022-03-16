@@ -11,17 +11,20 @@ final class DetailsCoordinator: NSObject, Coordinator {
     var childCoordinators: [Coordinator] = []
     private let presenter: UINavigationController
     private weak var navigationDelegate: CoordinatorDelegate?
+    private let launch: Launch
     
-    init(presenter: UINavigationController,
+    init(launch: Launch,
+         presenter: UINavigationController,
          navigationDelegate: CoordinatorDelegate? = nil) {
+        self.launch = launch
         self.presenter = presenter
         self.navigationDelegate = navigationDelegate
     }
     
     // MARK: - Functions
-    
     func start() {
-        let detailsViewModel = DetailsViewModel(navigationDelegate: self)
+        let detailsViewModel = DetailsViewModel(launch: launch,
+                                                navigationDelegate: self)
         let detailsViewController = DetailsViewController(viewModel: detailsViewModel)
         presenter.pushViewController(detailsViewController, animated: true)
     }

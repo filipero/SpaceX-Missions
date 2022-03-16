@@ -17,7 +17,6 @@ final class HomeViewController: UIViewController {
     init(viewModel: HomeViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: .main)
-        self.viewModel.dataSourceDelegate = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,6 +36,8 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupBinds() {
+        baseView.tableView.delegate = self
+        viewModel.dataSourceDelegate = self
         title = viewModel.screenTitle
         viewModel.requestMissions()
     }
@@ -48,5 +49,12 @@ extension HomeViewController: DataSourceDelegate {
             self.baseView.tableView.dataSource = self.viewModel.missionDataSource
             self.baseView.tableView.reloadData()
         }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedLaunch = viewModel.missionDataSource.models[indexPath.row].mission
+        viewModel.goToDetailsScreen(launch: selectedLaunch)
     }
 }

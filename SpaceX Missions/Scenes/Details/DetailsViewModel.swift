@@ -11,9 +11,12 @@ protocol DetailsNavigationDelegate: AnyObject { }
 protocol DetailsViewModelProtocol: AnyObject { }
 
 class DetailsViewModel {
+    private let launch: Launch
     private weak var navigationDelegate: DetailsNavigationDelegate?
     
-    init(navigationDelegate: DetailsNavigationDelegate? = nil) {
+    init(launch: Launch,
+         navigationDelegate: DetailsNavigationDelegate? = nil) {
+        self.launch = launch
         self.navigationDelegate = navigationDelegate
     }
 }
